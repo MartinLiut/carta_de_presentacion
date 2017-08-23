@@ -1,0 +1,307 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', Sans-serif, Arial, Helvetica;
+}
+
+.fondo{
+	background-image: url('../img/fondo1.png');
+	background-size: cover;		/*Para que abarque el 100%*/
+	background-attachment: fixed;
+	-webkit-transition: background-image 1s ease;
+	-o-transition: background-image 1s ease;
+	transition: background-image 1s ease;
+}
+
+a{ text-decoration: none; }
+
+.contenedor{
+	width: 90%;
+	max-width: 700px;
+	margin: auto;
+	height: 100%;
+	display: flex; /*FLEXBOX*/
+	align-items: center;
+}
+
+.tarjeta{
+	background: #fff;
+	margin: 40px 0;
+	border-radius: 7px;
+	overflow: hidden;
+	z-index: 1000;
+	width: 100%;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
+}
+
+.linea{
+	height: 1px;
+	width: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8c8c8+20,d4d4d4+50,c8c8c8+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100 */
+	background: -moz-linear-gradient(left,  rgba(200,200,200,0) 0%, rgba(200,200,200,0.8) 15%, rgba(200,200,200,1) 19%, rgba(200,200,200,1) 20%, rgba(212,212,212,1) 50%, rgba(200,200,200,1) 80%, rgba(200,200,200,1) 81%, rgba(200,200,200,0.8) 85%, rgba(200,200,200,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(200,200,200,0) 0%,rgba(200,200,200,0.8) 15%,rgba(200,200,200,1) 19%,rgba(200,200,200,1) 20%,rgba(212,212,212,1) 50%,rgba(200,200,200,1) 80%,rgba(200,200,200,1) 81%,rgba(200,200,200,0.8) 85%,rgba(200,200,200,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(200,200,200,0) 0%,rgba(200,200,200,0.8) 15%,rgba(200,200,200,1) 19%,rgba(200,200,200,1) 20%,rgba(212,212,212,1) 50%,rgba(200,200,200,1) 80%,rgba(200,200,200,1) 81%,rgba(200,200,200,0.8) 85%,rgba(200,200,200,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c8c8c8', endColorstr='#00c8c8c8',GradientType=1 ); /* IE6-9 */
+
+}
+/*-------------------------------------------------*/
+/*-------------SLIDER BANNER-----------------------*/
+/*-------------------------------------------------*/
+
+.slider-banner{
+	overflow: hidden;
+	z-index: 1000;
+	position: relative;
+}
+
+.slider-banner .banner{
+	position: relative;
+	width: 100%;
+}
+
+.slider-banner .banner img{
+	vertical-align: top;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.slider-banner .flecha-banner{
+	font-size: 35px;
+	line-height: 35px;
+	color: rgba(0, 0, 0, .2);
+	position: absolute;
+	top: 50%;
+	z-index: 1100; /* porque el banner ya tiene 1000, asi las flechas aparecen arriba del banner*/
+}
+
+.slider-banner .flecha-banner:hover{ color: rgba(0, 0, 0, .5);  }
+
+.slider-banner .anterior{ left: 20px }
+.slider-banner .siguiente{ right: 20px }
+
+/*-------------------------------------------------*/
+/*-------------SLIDER INFO-----------------------*/
+/*-------------------------------------------------*/
+
+.slider-info{
+	text-align: center;
+	overflow: hidden;
+	padding: 20px 0;
+	z-index: 1000;
+	position: relative;
+}
+
+/* Seccion informacion */
+.slider-info .informacion{
+	width: 100%;
+}
+
+.slider-info .informacion article{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider-info .informacion article .slide{
+	background: #fff;
+	width: 100%;
+	left: 100%;
+	padding: 20px 80px;
+	position: absolute;
+}
+
+.slider-info .flecha-info{
+	font-size: 35px;
+	line-height: 35px;
+	color: #e6e6e6;
+	position: absolute;
+	top: 50%;
+	z-index: 1000;
+}
+
+.slider-info .flecha-info:hover{ color: #6ed179;}
+
+.slider-info .anterior{
+	left: 20px;
+}
+
+.slider-info .siguiente{
+	right: 20px;
+}
+
+/* slides de  informacion */
+.slider-info .informacion .nombre{
+	font-family: 'Raleway';
+	color: rgba(1, 1, 1, .7);
+	font-size: 50px;
+	line-height: 38px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.slider-info .informacion .trabajo{
+	font-family: 'Raleway';
+	color: #55acee;
+	font-size: 1.3em;
+	line-height: 18px;
+	margin-bottom: 15px;
+	font-weight: 300;
+}
+
+.slider-info .informacion .pais{
+	color: #8d8d8d;
+	font-size: 1em;
+	line-height: 14px;
+	margin-bottom: 20px
+}
+
+.slider-info .informacion .pais img{
+	position: relative;
+	top: 15px;
+	margin-right: 10px;
+	width: 3em;
+}
+
+.slider-info .informacion .texto{
+	color: #55acee;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.slider-info .informacion .subtitulo{
+	color: #444;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+
+/* Botones slider-info */
+.slider-info .botones{
+	width: 100%;
+}
+
+.slider-info .botones span{
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 10px;
+	border-radius: 50%;
+	background: #e6e6e6;
+}
+
+.slider-info .botones span.active{
+	background: #6ed279;
+}
+
+/* Redes sociales */
+.redes-sociales{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.redes-sociales a{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 20px;
+	padding: 14px 0;
+	color: #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	box-shadow: 0px 0px 6px rgba(1, 1, 1, .4);
+}
+
+.redes-sociales .behance{
+	background: #1769ff;
+}
+.redes-sociales .facebook{
+	background: #3b5998;
+}
+.redes-sociales .twitter{
+	background: #55acee;
+}
+
+.email{
+	color: #ccc;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+/* Footer */
+footer
+{
+	width: 100%;
+	background: rgba(1, 1, 1, .2);
+	position: fixed;
+	bottom: 0px;
+}
+
+footer .copyright{
+	padding: 7px;
+	color: rgba(1, 1, 1, .4);
+	margin: auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	.slider-info .informacion .nombre{
+		font-size: 1.5em;
+		margin-bottom: 7px;
+	}
+
+	.slider-info .informacion .trabajo{
+		font-size: 1em;
+		margin-bottom: 7px;
+	}
+
+	.slider-info .informacion .pais{
+		font-size: 1em;
+		margin-bottom: 7px;
+	}
+
+	.slider-info .informacion .pais img{
+		width: 20px;
+		top: 5px;
+	}
+
+	.email{
+		color: #ccc;
+		margin-bottom: 10px;
+		font-size: 1em;
+	}
+
+	.redes-sociales a{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		line-height: 0px;
+		padding: 7px 0;
+		color: #fff;
+		border-radius: 50%;
+		margin: 0 5px;
+	}
+
+	.slider-info .informacion .texto{
+		color: #55acee;
+		font-size: 12px;
+		line-height: 14px;
+	}	
+
+	.slider-info .informacion article .slide{
+		padding: 0px 50px 20px;
+	}
+
+	.slider-info .botones span{
+		width: 12px;
+		height: 12px;
+	}
+}
